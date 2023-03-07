@@ -10,6 +10,7 @@
     <p>Hello World</p>
     {% if user.is_authenticated%}
     <p>Hello you're logged in</p>
+    <p>Sal de tu cuenta: <a href="/logout">aquí</a></p>
     {% else %}
     <a href="/login">Login here</a>
     {% endif %}
