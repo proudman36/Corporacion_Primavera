@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render
 from .forms import RegisterForm
 from django.contrib.auth import authenticate, login, logout
 
@@ -7,7 +7,6 @@ def register(response):
         form = RegisterForm(response.POST)
         if form.is_valid():
             form.save()
-            return redirect('Accounts:login')
     else:
         form = RegisterForm()
     
