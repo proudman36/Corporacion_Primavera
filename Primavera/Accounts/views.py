@@ -16,5 +16,7 @@ def register(response):
 def loginPage(request):
     return render(request, 'registration/login.html',{})
 
+
+
 def logoutPage(request):
     return render(request, 'exit/logout.html',{})
