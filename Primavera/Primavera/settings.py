@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'form.apps.FormConfig',
+    'forms.apps.FormsConfig',
     'news.apps.NewsConfig',
     'home.apps.HomeConfig',
     'about.apps.AboutConfig',
