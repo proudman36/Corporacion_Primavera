@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 
 from .models import New
 
@@ -13,5 +13,6 @@ def post_news(request):
         image = request.FILES['image']
         new = New.objects.create(image = image, title = title, description = description)
         new.save()
+        return redirect('news:index')
         
     return render(request, 'post_news/post.html',{})
