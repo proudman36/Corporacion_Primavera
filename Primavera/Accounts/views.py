@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render, redirect
 from .forms import RegisterForm
 from django.contrib.auth import authenticate, login, logout
 
@@ -15,6 +15,8 @@ def register(response):
 
 def loginPage(request):
     return render(request, 'registration/login.html',{})
+
+
 
 def logoutPage(request):
     return render(request, 'exit/logout.html',{})
