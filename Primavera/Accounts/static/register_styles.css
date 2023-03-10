@@ -1,0 +1,18 @@
+form{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    background-color:#82F27E;
+    height: 600px;
+    width: 400px;
+    border-radius: 10px;
+}
+.form{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 800px;
+    text-align: center;
+}
