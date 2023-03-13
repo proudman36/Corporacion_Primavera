@@ -28,13 +28,13 @@
                 <a class="nav-link" href="about">¿Quienes Somos?</a>
               </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Voluntariado</a>
+            <a class="nav-link" href="{% url 'projects_primavera:projects' %}">Voluntariado</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Donaciones</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Noticias</a>
+            <a class="nav-link" href="{% url 'blog:posts' %}">Noticias</a>
           </li>
     {% if user.is_authenticated%}
     <p>Hello you're logged in</p>
@@ -44,7 +44,7 @@
     {% endif %}
 </nav>
     <!--Banner-->
-<div class="card" style="d-flex;">
+<div class="card d-flex;">
     <img class="card-img-top" src="https://pbs.twimg.com/media/FibDObUWQAMC-FZ?format=jpg&name=medium" alt="Card image cap">
     <div class="card-body">
     <button type="button" class="btn btn-success">Haz parte del cambio</button>
