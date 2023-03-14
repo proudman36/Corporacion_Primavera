@@ -43,8 +43,10 @@ body{
 }
  @media  screen and (max-width:800px) {
     body{
-        background-image: url(../static/images/paisaje3.jpeg);
-        background-size: 800px 1080px;
+        background-image: url(../static/images/imagen2.jpeg);
+        background-size: 500px 900px;
+        width: 350px;
+        height: 600px;
     }
     .child_container{
         width: 200px;
