@@ -1,24 +1,21 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
+from django.urls import reverse
 from django.shortcuts import redirect
 from django.conf import settings
+from .forms import Contact_Form
 
 def index(request):
-    return render(request, 'form/index.html')
-
-def contact(request):
+    contact_form = Contact_Form()
     if request.method == 'POST':
-        name = request.POST['name']
-        email = request.POST['email']
-        subject = request.POST['subject']
-        phone = request.POST['phone']
-        country = request.POST['country']
-        message = request.POST['message']
-        from_email = settings.EMAIL_HOST_USER
-        recipient_list = ['newhamonesjames@gmail.com']
-        email_body = render_to_string('form/email_body.html', {'name': name, 'email': email, 'subject': subject, 'phone': phone, 'country': country, 'message': message})
-        send_mail(subject, email_body, from_email, recipient_list, fail_silently=False, html_message=email_body)
-        return redirect('index')
-    else:
-        return render(request, 'form/index.html', {})
+        contact_form = Contact_Form(data=request.POST)
+
+        if contact_form.is_valid():
+            contact_form.save()
+            return redirect(reverse('index')+'?ok')
+        
+        else:
+            return redirect(reverse('index')+'?error')
+
+    return render(request, 'form/index.html', {'form':contact_form})
