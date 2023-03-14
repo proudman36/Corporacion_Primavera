@@ -41,3 +41,10 @@ form{
     border-width: 3px;
     font-size: 16px;
 }
+
+@media screen and (max-width:800px){
+    form{
+        width: 300px;
+    }
+
+}
