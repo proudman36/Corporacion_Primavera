@@ -32,7 +32,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+<<<<<<< HEAD
     'forms.apps.FormsConfig',
+=======
+>>>>>>> main
     'news.apps.NewsConfig',
     'home.apps.HomeConfig',
     'about.apps.AboutConfig',
@@ -43,7 +46,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
     "phonenumber_field",
+=======
+    'blog',
+    'projects_primavera',
+>>>>>>> main
 ]
 
 
@@ -123,9 +131,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 STATICFILES_DIR =(os.path.join(BASE_DIR, 'about/static/'),) 
+STATICFILES_DIR =(os.path.join(BASE_DIR, 'home/static/'),) 
 
 MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/media/'
