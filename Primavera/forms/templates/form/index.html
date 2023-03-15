@@ -9,11 +9,12 @@
     <title>Document</title>
 </head>
 <body>
-    <form  method="POST">
-        {% csrf_token%}
-        {{form}}
-        <button type="submit">Enviar</button>
-        
-    </form>
+    <div class="form">
+        <form  method="POST">
+            {% csrf_token%}
+            {{form}}
+            <button type="submit" class="btn">Enviar</button>
+         </form>
+    </div>
 </body>
 </html>
