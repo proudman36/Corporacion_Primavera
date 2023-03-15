@@ -32,10 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-<<<<<<< HEAD
     'forms.apps.FormsConfig',
-=======
->>>>>>> main
     'news.apps.NewsConfig',
     'home.apps.HomeConfig',
     'about.apps.AboutConfig',
@@ -46,12 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
     "phonenumber_field",
-=======
-    'blog',
-    'projects_primavera',
->>>>>>> main
+    "blog",
+    "projects_primavera",
 ]
 
 
